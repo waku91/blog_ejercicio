@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head><!- carga de iconos, framework, y hoja de estilos->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/estilosLogin.css">
+    <link href="img/logo.png" rel="icon" type="image/gif">
+    <meta charset="utf-8"/>
+    <script>
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+    </script>
+    <title>Login Bloggo</title>
+  </head>
+  <body style="background-image: url(img/fondo.png); background-repeat: repeat;">
+    <div class="section"></div>
+    <main>
+      <center>
+        <div class="container"><!-contenedor en el cual se muestra el login->
+          <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 15px 28px 0px 28px; border: 1px solid #EEE; border-radius: 10px;">
+            <form class="col s12" action="login/log.php" method="post"> <!-formulario donse de ingresasel usuario y la contraseña->
+              <div class='row'>
+                <img class="responsive-img" style="width: 113px;" src="img/logo.png" />
+                <p class="center login-form-text" style="font-weight: thin; letter-spacing: 1px; font-size: 11px;">
+                  EL NUEVO BLOG
+                </p>
+                <div class='col s12'>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='input-field col s12'>
+                  <i class="material-icons prefix">perm_identity</i>
+                  <input id='username' type="text" name="usuario" />
+                  <label for='username' class="center-align">Usuario</label>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='input-field col s12'>
+                  <i class="material-icons prefix">lock_outline</i>
+                  <input id='password' type="password" name="password" />
+                  <label for='password' id="passw" data-error="wrong">Contraseña</label>
+                </div>
+              </div>
+              <center>
+                <div class='row'> <!-boton para logearse->
+                  <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect deep-purple lighten-1'>Ingresar</button>
+                </div>
+              </center>
+            </form>
+          </div>
+        </div>
+      </center>
+    </main>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" href="js/login.js"></script>
+  </body>
+</html>
